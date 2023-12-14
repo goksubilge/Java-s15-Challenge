@@ -1,13 +1,10 @@
 package com.wit.LibrarySystem.entity;
 
 import com.wit.LibrarySystem.enums.GenderTypes;
-import com.wit.LibrarySystem.enums.MemberTypes;
 
-import java.util.Date;
-
-public class Users {
+abstract class Users {
     private Long identity;
-    private String name;
+    public String name;
     private String surName;
     private GenderTypes genderTypes;
 
@@ -18,29 +15,23 @@ public class Users {
         this.genderTypes = genderTypes;
     }
 
-    public Long getIdentity() {return identity;}
+    public boolean isUserLogIn(){
+        return false;
+    }
 
-    public void setIdentity(Long identity) {this.identity = identity;}
+    public boolean isUserLogOut(){
+        return false;
+    }
 
-    public String getName() {return name;}
-
-    public void setName(String name) {this.name = name;}
-
-    public String getSurName() {return surName;}
-
-    public void setSurName(String surName) {this.surName = surName;}
-
-    public GenderTypes getGenderTypes() {return genderTypes;}
-
-    public void setGenderTypes(GenderTypes genderTypes) {this.genderTypes = genderTypes;}
+    public abstract void showDetails();
 
     @Override
     public String toString() {
         return "Users{" +
-                "identity=" + identity +
-                ", name='" + name + '\'' +
-                ", surName='" + surName + '\'' +
-                ", genderTypes=" + genderTypes +
+                "identity: " + identity +
+                ", Name: " + name + '\'' +
+                ", SurName: " + surName + '\'' +
+                ", Gender: " + genderTypes +
                 '}';
     }
 }
