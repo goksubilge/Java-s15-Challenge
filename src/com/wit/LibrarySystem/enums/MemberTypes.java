@@ -4,5 +4,6 @@ public enum MemberTypes {
     STUDENT,
     EMPLOYEE,
     LIBRARIAN,
-    ACADEMICIAN
+    ACADEMICIAN,
+    JOURNALIST
 }
