@@ -1,8 +1,9 @@
 package com.wit.LibrarySystem.entity;
 
+import com.wit.LibrarySystem.Services.ManagerService;
 import com.wit.LibrarySystem.enums.GenderTypes;
 
-public class LibraryUser extends Users {
+public class LibraryUser extends Users implements ManagerService {
     private int processCount;
 
     public LibraryUser(Long identity, String name, String surName, GenderTypes genderTypes) {
@@ -32,5 +33,21 @@ public class LibraryUser extends Users {
         builderLibraryUser.append("Process Count: " + processCount +"\n");
         builderLibraryUser.append("********************************\n");
         System.out.println(builderPFS + builderLibraryUser.toString());
+    }
+
+    @Override
+    public void addMember(Members member) {
+        // TODO
+    }
+
+    @Override
+    public boolean authenticateMember(String memberId, String password) {
+        // TODO
+        return false;
+    }
+
+    @Override
+    public void deleteMember(int memberId) {
+        // TODO
     }
 }

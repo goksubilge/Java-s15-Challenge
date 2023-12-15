@@ -1,8 +1,11 @@
 package com.wit.LibrarySystem.entity;
 
+import com.wit.LibrarySystem.Services.BookService;
 import com.wit.LibrarySystem.enums.BooksCategories;
 
-public class Books {
+import java.util.List;
+
+public class Books implements BookService {
     private String id;
     private String bookName;
     private String authorFullName;
@@ -41,5 +44,50 @@ public class Books {
                 ", price: " + price +
                 ", booksCategories: " + booksCategories +
                 '}';
+    }
+
+    @Override
+    public void addBook(Books book) {
+        // TODO
+    }
+
+    @Override
+    public void updateBook(Books book) {
+        // TODO
+    }
+
+    @Override
+    public void deleteBook(int id) {
+        // TODO
+    }
+
+    @Override
+    public Books getBookByIdManager(String id) {
+        // TODO
+        return null;
+    }
+
+    @Override
+    public List<Books> getBooksByBookName(String bookName) {
+        // TODO
+        return null;
+    }
+
+    @Override
+    public List<Books> getBooksByAuthor(String authorName) {
+        // TODO
+        return null;
+    }
+
+    @Override
+    public List<Books> getBooksByCategory(BooksCategories category) {
+        // TODO
+        return null;
+    }
+
+    @Override
+    public List<Books> getAllBooks() {
+        // TODO
+        return null;
     }
 }
